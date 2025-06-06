@@ -1,0 +1,2753 @@
+<label class="radio-option">
+                                        <input type="radio" name="compliance_status" value="partially_compliant" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Partially Compliant</div>
+                                            <div class="option-description">Some compliance measures in place, significant work needed</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="compliance_status" value="limited_compliance" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Limited Compliance</div>
+                                            <div class="option-description">Basic data protection, comprehensive compliance program needed</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Data Volume & Processing Requirements</div>
+                            <div class="question-description">Understanding your data scale helps determine appropriate AI infrastructure needs</div>
+                            <div class="form-group">
+                                <label>Estimated monthly data volume processed:</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="data_volume" value="small" onchange="updateSelection(this)">
+                                        <span>Small (< 1GB) - Spreadsheets, basic databases</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="data_volume" value="medium" onchange="updateSelection(this)">
+                                        <span>Medium (1GB - 1TB) - Substantial databases, CRM systems</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="data_volume" value="large" onchange="updateSelection(this)">
+                                        <span>Large (1TB - 100TB) - Enterprise data, extensive histories</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="data_volume" value="very_large" onchange="updateSelection(this)">
+                                        <span>Very Large (100TB+) - Big data, real-time streams</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="completion-controls">
+                            <button class="btn btn-primary" onclick="completePhase(2)" disabled id="complete-btn-2">
+                                Continue to Technical Assessment →
+                            </button>
+                            <button class="btn btn-secondary" onclick="togglePhase(1)">
+                                ← Back to Strategy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3: Technical Capabilities & AI Readiness -->
+            <div class="phase" data-phase="3">
+                <div class="phase-header" onclick="togglePhase(3)">
+                    <div class="phase-title">
+                        <div class="phase-number">⚙️</div>
+                        <div class="phase-info">
+                            <h3>Technical Capabilities & AI Readiness</h3>
+                            <p>Evaluate your team's technical expertise and infrastructure readiness for AI implementation</p>
+                        </div>
+                    </div>
+                    <div class="phase-meta">
+                        <div class="estimated-time">⏱️ 4-5 minutes</div>
+                        <div class="phase-status">
+                            <div class="status-indicator"></div>
+                            <div class="expand-icon">▼</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-content">
+                    <div class="phase-details">
+                        <div class="expert-insight">
+                            <h5>Technical Readiness Framework</h5>
+                            <p>Technical capability assessment determines the optimal implementation approach - whether to build in-house, partner with specialists, or use ready-made solutions.</p>
+                        </div>
+
+                        <div class="section-divider">
+                            <div class="section-title">Team Expertise & Resources</div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Current AI/ML Technical Expertise *</div>
+                            <div class="question-description">Honest assessment of your team's current AI and machine learning capabilities</div>
+                            <div class="form-group">
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="ai_expertise_level" value="expert" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Expert Level</div>
+                                            <div class="option-description">Dedicated AI/ML team, proven implementations, advanced algorithms</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="ai_expertise_level" value="intermediate" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Intermediate Level</div>
+                                            <div class="option-description">Some AI experience, data science capabilities, basic implementations</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="ai_expertise_level" value="beginner" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Beginner Level</div>
+                                            <div class="option-description">Limited AI knowledge, willing to learn, strong technical foundation</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="ai_expertise_level" value="none" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">No AI Expertise</div>
+                                            <div class="option-description">No current AI knowledge, need external support or training</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Available Technical Resources *</div>
+                            <div class="question-description">Select all technical roles and capabilities currently available in your organization</div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technical_resources" value="data_scientists" onchange="updateCheckboxSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Data Scientists</div>
+                                            <div class="option-description">Statistical analysis, ML model development, research</div>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technical_resources" value="ml_engineers" onchange="updateCheckboxSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">ML Engineers</div>
+                                            <div class="option-description">Model deployment, MLOps, production systems</div>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technical_resources" value="software_developers" onchange="updateCheckboxSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Software Developers</div>
+                                            <div class="option-description">Python/R/JavaScript, API integration, general programming</div>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technical_resources" value="data_engineers" onchange="updateCheckboxSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Data Engineers</div>
+                                            <div class="option-description">Data pipelines, ETL, database management</div>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technical_resources" value="cloud_architects" onchange="updateCheckboxSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Cloud/Infrastructure Engineers</div>
+                                            <div class="option-description">Cloud platforms, DevOps, scalable infrastructure</div>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technical_resources" value="business_analysts" onchange="updateCheckboxSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Business/Data Analysts</div>
+                                            <div class="option-description">Requirements gathering, data analysis, reporting</div>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technical_resources" value="project_managers" onchange="updateCheckboxSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Technical Project Managers</div>
+                                            <div class="option-description">Technology project coordination, agile methodologies</div>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technical_resources" value="limited_technical" onchange="updateCheckboxSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Limited Technical Staff</div>
+                                            <div class="option-description">Minimal technical resources, need external support</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-divider">
+                            <div class="section-title">Implementation Approach Preferences</div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Preferred AI Implementation Strategy *</div>
+                            <div class="question-description">Choose the approach that best aligns with your resources, timeline, and strategic objectives</div>
+                            <div class="form-group">
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="implementation_approach" value="build_inhouse" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Build In-House</div>
+                                            <div class="option-description">Develop custom solutions with internal team, maximum control</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="implementation_approach" value="hybrid_approach" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Hybrid Approach</div>
+                                            <div class="option-description">Combine internal capabilities with external expertise and tools</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="implementation_approach" value="saas_solutions" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">SaaS/Platform Solutions</div>
+                                            <div class="option-description">Use existing AI platforms and tools, faster implementation</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="implementation_approach" value="outsource_completely" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Full Outsourcing</div>
+                                            <div class="option-description">Partner with AI consultancy/agency, minimal internal involvement</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Technology Infrastructure Assessment</div>
+                            <div class="question-description">Rate your current technology infrastructure readiness for AI implementation</div>
+                            <div class="form-group">
+                                <div class="matrix-question">
+                                    <table class="matrix-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Infrastructure Component</th>
+                                                <th>Poor (1)</th>
+                                                <th>Fair (2)</th>
+                                                <th>Good (3)</th>
+                                                <th>Excellent (4)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Cloud Infrastructure</td>
+                                                <td><input type="radio" name="cloud_infrastructure" value="1" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="cloud_infrastructure" value="2" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="cloud_infrastructure" value="3" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="cloud_infrastructure" value="4" onchange="updateMatrixSelection(this)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Security & Access Controls</td>
+                                                <td><input type="radio" name="security_controls" value="1" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="security_controls" value="2" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="security_controls" value="3" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="security_controls" value="4" onchange="updateMatrixSelection(this)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>API Integration Capabilities</td>
+                                                <td><input type="radio" name="api_capabilities" value="1" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="api_capabilities" value="2" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="api_capabilities" value="3" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="api_capabilities" value="4" onchange="updateMatrixSelection(this)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Scalability & Performance</td>
+                                                <td><input type="radio" name="scalability_performance" value="1" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="scalability_performance" value="2" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="scalability_performance" value="3" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="scalability_performance" value="4" onchange="updateMatrixSelection(this)"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-divider">
+                            <div class="section-title">Current Technology Stack</div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Primary Technology Platforms & Tools</div>
+                            <div class="question-description">Understanding your current stack helps identify integration opportunities and potential conflicts</div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technology_stack" value="crm_systems" onchange="updateCheckboxSelection(this)">
+                                        <span>CRM Systems (Salesforce, HubSpot, etc.)</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technology_stack" value="erp_systems" onchange="updateCheckboxSelection(this)">
+                                        <span>ERP Systems (SAP, Oracle, NetSuite, etc.)</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technology_stack" value="business_intelligence" onchange="updateCheckboxSelection(this)">
+                                        <span>Business Intelligence Tools (Tableau, Power BI, etc.)</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technology_stack" value="marketing_automation" onchange="updateCheckboxSelection(this)">
+                                        <span>Marketing Automation (Marketo, Mailchimp, etc.)</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technology_stack" value="ecommerce_platforms" onchange="updateCheckboxSelection(this)">
+                                        <span>E-commerce Platforms (Shopify, Magento, etc.)</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technology_stack" value="cloud_platforms" onchange="updateCheckboxSelection(this)">
+                                        <span>Cloud Platforms (AWS, Azure, Google Cloud)</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technology_stack" value="custom_applications" onchange="updateCheckboxSelection(this)">
+                                        <span>Custom-built Applications</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="technology_stack" value="legacy_systems" onchange="updateCheckboxSelection(this)">
+                                        <span>Legacy Systems (mainframes, older databases)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="completion-controls">
+                            <button class="btn btn-primary" onclick="completePhase(3)" disabled id="complete-btn-3">
+                                Continue to Implementation Planning →
+                            </button>
+                            <button class="btn btn-secondary" onclick="togglePhase(2)">
+                                ← Back to Data Assessment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional phases would continue here with similar structure -->
+            <!-- Due to length constraints, I'll include the JavaScript functions next -->
+
+        </div>
+
+        <!-- Summary Section will be populated after completion -->
+        <div class="summary-section" id="summarySection">
+            <!-- Content will be dynamically generated -->
+        </div>
+
+        <!-- Call-to-Action Section -->
+        <div class="cta-section">
+            <div class="cta-title">Ready to Transform Your Business with AI?</div>
+            <div class="cta-description">Get your personalized AI implementation roadmap and expert consultation</div>
+            <div class="cta-buttons">
+                <button class="btn btn-success" onclick="scheduleConsultation()">
+                    📅 Schedule Strategy Call
+                </button>
+                <button class="btn btn-primary" onclick="downloadAssessment()">
+                    📊 Download Full Report
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced Assessment Data Structure
+        let assessmentData = {
+            phase0: {}, // Business Intelligence
+            phase1: {}, // Strategic Objectives
+            phase2: {}, // Data Infrastructure
+            phase3: {}, // Technical Capabilities
+            phase4: {}, // Implementation Planning
+            phase5: {}, // Organizational Readiness
+            phase6: {}, // Financial & ROI Analysis
+            completedPhases: 0,
+            startTime: new Date(),
+            lastSaved: null,
+            assessmentScore: 0,
+            riskFactors: [],
+            recommendations: []
+        };
+
+        // Time tracking
+        let startTime = new Date();
+        let timeInterval;
+
+        // Initialize premium assessment
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeAssessment();
+            startTimeTracking();
+            loadSavedProgress();
+        });
+
+        function initializeAssessment() {
+            togglePhase(0);
+            updateProgress();
+            updateTimeDisplay();
+            initializeNavigation();
+        }
+
+        function startTimeTracking() {
+            timeInterval = setInterval(updateTimeDisplay, 1000);
+        }
+
+        function updateTimeDisplay() {
+            const elapsed = Math.floor((new Date() - startTime) / 1000);
+            const minutes = Math.floor(elapsed / 60);
+            const seconds = elapsed % 60;
+            document.getElementById('timeElapsed').textContent = 
+                `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Update estimated remaining time based on progress
+            const progress = assessmentData.completedPhases / 7;
+            const estimatedTotal = 25; // 25 minutes total
+            const remaining = Math.max(0, estimatedTotal - minutes);
+            document.getElementById('estimatedRemaining').textContent = 
+                `Est. Remaining: ${remaining} min`;
+        }
+
+        function initializeNavigation() {
+            const navPhases = document.querySelectorAll('.nav-phase');
+            navPhases.forEach(nav => {
+                nav.addEventListener('click', function() {
+                    const phaseNum = parseInt(this.dataset.phase);
+                    if (phaseNum <= assessmentData.completedPhases) {
+                        togglePhase(phaseNum);
+                    }
+                });
+            });
+        }
+
+        // Enhanced toggle phase with navigation updates
+        function togglePhase(phaseNumber) {
+            const phase = document.querySelector(`[data-phase="${phaseNumber}"]`);
+            const isExpanded = phase.classList.contains('expanded');
+            
+            // Close all phases
+            document.querySelectorAll('.phase').forEach(p => {
+                p.classList.remove('expanded', 'active');
+            });
+            
+            // Update navigation
+            document.querySelectorAll('.nav-phase').forEach(nav => {
+                nav.classList.remove('active');
+            });
+            
+            // Open selected phase if it wasn't already open
+            if (!isExpanded) {
+                phase.classList.add('expanded', 'active');
+                const navPhase = document.querySelector(`[data-phase="${phaseNumber}"]`);
+                if (navPhase) navPhase.classList.add('active');
+            }
+            
+            // Update current phase display
+            document.getElementById('currentPhase').textContent = `Phase ${phaseNumber} of 7`;
+        }
+
+        // Enhanced selection handling with dynamic recommendations
+        function updateSelection(element) {
+            const groupName = element.name;
+            document.querySelectorAll(`input[name="${groupName}"]`).forEach(input => {
+                input.closest('.radio-option').classList.remove('selected');
+            });
+            
+            element.closest('.radio-option').classList.add('selected');
+            saveAnswer(element);
+            
+            // Trigger dynamic recommendations
+            generateDynamicRecommendations(element);
+        }
+
+        function updateCheckboxSelection(element, maxSelections = null) {
+            const option = element.closest('.checkbox-option');
+            
+            if (element.checked) {
+                option.classList.add('selected');
+                
+                if (maxSelections) {
+                    const groupName = element.name;
+                    const selectedCount = document.querySelectorAll(`input[name="${groupName}"]:checked`).length;
+                    
+                    if (selectedCount > maxSelections) {
+                        element.checked = false;
+                        option.classList.remove('selected');
+                        alert(`Please select only ${maxSelections} options.`);
+                        return;
+                    }
+                }
+            } else {
+                option.classList.remove('selected');
+            }
+            
+            saveAnswer(element);
+            generateDynamicRecommendations(element);
+        }
+
+        function updateMatrixSelection(element) {
+            saveAnswer(element);
+        }
+
+        function updateSliderValue(slider, displayId) {
+            document.getElementById(displayId).textContent = slider.value + '%';
+            saveAnswer(slider);
+        }
+
+        // Enhanced answer saving with validation
+        function saveAnswer(element) {
+            const phaseName = element.closest('.phase').dataset.phase;
+            const phaseKey = `phase${phaseName}`;
+            
+            if (element.type === 'checkbox') {
+                const groupName = element.name;
+                const checkboxes = document.querySelectorAll(`input[name="${groupName}"]:checked`);
+                assessmentData[phaseKey][groupName] = Array.from(checkboxes).map(cb => cb.value);
+            } else {
+                assessmentData[phaseKey][element.name] = element.value;
+            }
+            
+            checkPhaseCompletion(parseInt(phaseName));
+            updateProgress();
+            
+            assessmentData.lastSaved = new Date();
+            saveProgress();
+        }
+
+        // Suboption toggles for enhanced questions
+        function toggleIndustrySuboptions(industryId) {
+            const checkbox = document.querySelector(`input[name="industries"][value="${industryId}"]`);
+            const suboptions = document.getElementById(`suboptions-${industryId}`);
+            
+            if (checkbox.checked) {
+                suboptions.style.display = 'block';
+            } else {
+                suboptions.style.display = 'none';
+                clearSuboptions(suboptions);
+            }
+        }
+
+        function toggleCompanySizeSuboptions(sizeId) {
+            // Hide all size suboptions
+            document.querySelectorAll('[id*="suboptions-startup"], [id*="suboptions-small"], [id*="suboptions-mid"], [id*="suboptions-enterprise"]').forEach(el => {
+                el.style.display = 'none';
+                clearSuboptions(el);
+            });
+            
+            const suboptions = document.getElementById(`suboptions-${sizeId}`);
+            if (suboptions) {
+                suboptions.style.display = 'block';
+            }
+        }
+
+        function toggleAIObjectiveSuboptions(objectiveId) {
+            const checkbox = document.querySelector(`input[name="ai_objectives"][value="${objectiveId}"]`);
+            const suboptions = document.getElementById(`suboptions-${objectiveId}`);
+            
+            if (checkbox.checked) {
+                suboptions.style.display = 'block';
+            } else {
+                suboptions.style.display = 'none';
+                clearSuboptions(suboptions);
+            }
+        }
+
+        function toggleDataTypeSuboptions(dataTypeId) {
+            const checkbox = document.querySelector(`input[name="data_types"][value="${dataTypeId}"]`);
+            const suboptions = document.getElementById(`suboptions-${dataTypeId}`);
+            
+            if (checkbox.checked) {
+                suboptions.style.display = 'block';
+            } else {
+                suboptions.style.display = 'none';
+                clearSuboptions(suboptions);
+            }
+        }
+
+        function clearSuboptions(suboptions) {
+            const subCheckboxes = suboptions.querySelectorAll('input[type="checkbox"]');
+            subCheckboxes.forEach(cb => {
+                cb.checked = false;
+                cb.closest('.suboption-item').classList.remove('selected');
+            });
+        }
+
+        // Dynamic recommendation generation
+        function generateDynamicRecommendations(element) {
+            // Industry-specific recommendations
+            if (element.name === 'industries') {
+                showIndustryRecommendation(element.value, element.checked);
+            }
+            
+            // Revenue-based ROI updates
+            if (element.name === 'revenue_range') {
+                updateROIModel();
+            }
+            
+            // Website analysis trigger
+            if (element.name === 'website_url' && element.value) {
+                analyzeWebsite(element.value);
+            }
+        }
+
+        function showIndustryRecommendation(industry, isSelected) {
+            const recommendations = {
+                'retail_ecommerce': 'Consider AI-powered personalization engines and dynamic pricing for 15-25% revenue increase.',
+                'healthcare_medical': 'Focus on patient data analytics and automated scheduling for improved care delivery.',
+                'financial_services': 'Implement fraud detection and risk assessment AI for regulatory compliance.',
+                'technology_software': 'Enhance your products with AI features to increase competitive advantage.',
+                'manufacturing': 'Predictive maintenance and quality control AI can reduce downtime by 20-30%.'
+            };
+            
+            if (isSelected && recommendations[industry]) {
+                showDynamicRecommendation(recommendations[industry]);
+            }
+        }
+
+        function showDynamicRecommendation(text) {
+            const existingRec = document.querySelector('.dynamic-recommendation.show');
+            if (existingRec) {
+                existingRec.classList.remove('show');
+            }
+            
+            setTimeout(() => {
+                const rec = document.createElement('div');
+                rec.className = 'dynamic-recommendation show';
+                rec.innerHTML = `<strong>💡 AI Opportunity:</strong> ${text}`;
+                
+                const currentPhase = document.querySelector('.phase.active .phase-details');
+                if (currentPhase) {
+                    currentPhase.appendChild(rec);
+                }
+            }, 300);
+        }
+
+        function updateROIModel() {
+            const revenue = assessmentData.phase0.revenue_range;
+            // Implementation of ROI modeling based on revenue range
+            // This would calculate potential ROI scenarios
+        }
+
+        function analyzeWebsite(url) {
+            // Simulated website analysis
+            const analysisDiv = document.getElementById('website-analysis');
+            const insightsSpan = document.getElementById('website-insights');
+            
+            if (url && url.includes('http')) {
+                insightsSpan.textContent = 'Website appears to be e-commerce focused. Consider AI-powered product recommendations and chatbot integration.';
+                analysisDiv.classList.add('show');
+            }
+        }
+
+        // Enhanced phase completion checking
+        function checkPhaseCompletion(phaseNumber) {
+            const requiredFields = getRequiredFields(phaseNumber);
+            const phaseData = assessmentData[`phase${phaseNumber}`];
+            
+            let isComplete = true;
+            let completionPercentage = 0;
+            
+            for (const field of requiredFields) {
+                if (phaseData[field] && 
+                    (Array.isArray(phaseData[field]) ? phaseData[field].length > 0 : phaseData[field].trim() !== '')) {
+                    completionPercentage += (1 / requiredFields.length) * 100;
+                } else {
+                    isComplete = false;
+                }
+            }
+                                                        <label class="suboption-item">
+                                                <input type="checkbox" name="cost_reduction_details" value="process_efficiency">
+                                                <span>Process efficiency improvements</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="cost_reduction_details" value="error_reduction">
+                                                <span>Reducing costly errors and rework</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="cost_reduction_details" value="resource_optimization">
+                                                <span>Better resource utilization and planning</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="cost_reduction_details" value="vendor_optimization">
+                                                <span>Vendor and supply chain cost optimization</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group" style="margin-top: 15px;">
+                                            <label>Target cost reduction percentage:</label>
+                                            <input type="range" class="slider" name="cost_reduction_target" min="5" max="50" value="15" onchange="updateSliderValue(this, 'cost-reduction-value')">
+                                            <div class="slider-labels">
+                                                <span>5%</span>
+                                                <span id="cost-reduction-value">15%</span>
+                                                <span>50%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="ai_objectives" value="revenue_growth" onchange="updateCheckboxSelection(this); toggleAIObjectiveSuboptions('revenue_growth')">
+                                        <div class="option-content">
+                                            <div class="option-title">Drive Revenue Growth</div>
+                                            <div class="option-description">Customer acquisition, upselling, new products, market expansion</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-revenue_growth" style="display: none;">
+                                        <div class="suboption-title">Revenue growth strategies:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="revenue_growth_details" value="customer_acquisition">
+                                                <span>Improved customer acquisition and conversion</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="revenue_growth_details" value="customer_lifetime_value">
+                                                <span>Increase customer lifetime value</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="revenue_growth_details" value="personalization">
+                                                <span>Personalized offerings and recommendations</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="revenue_growth_details" value="pricing_optimization">
+                                                <span>Dynamic pricing and revenue optimization</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="revenue_growth_details" value="new_products">
+                                                <span>AI-powered new products and services</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="ai_objectives" value="customer_experience" onchange="updateCheckboxSelection(this); toggleAIObjectiveSuboptions('customer_experience')">
+                                        <div class="option-content">
+                                            <div class="option-title">Enhance Customer Experience</div>
+                                            <div class="option-description">Support quality, response times, personalization, satisfaction</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-customer_experience" style="display: none;">
+                                        <div class="suboption-title">Customer experience improvements:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="customer_experience_details" value="support_automation">
+                                                <span>24/7 automated customer support</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="customer_experience_details" value="response_speed">
+                                                <span>Faster response and resolution times</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="customer_experience_details" value="personalization_engine">
+                                                <span>Personalized customer journeys</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="customer_experience_details" value="predictive_service">
+                                                <span>Predictive and proactive service</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="customer_experience_details" value="omnichannel">
+                                                <span>Seamless omnichannel experiences</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="ai_objectives" value="operational_automation" onchange="updateCheckboxSelection(this); toggleAIObjectiveSuboptions('operational_automation')">
+                                        <div class="option-content">
+                                            <div class="option-title">Automate Operations</div>
+                                            <div class="option-description">Process automation, workflow optimization, manual task reduction</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-operational_automation" style="display: none;">
+                                        <div class="suboption-title">Automation priorities:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="automation_details" value="data_processing">
+                                                <span>Data entry and processing automation</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="automation_details" value="workflow_orchestration">
+                                                <span>Workflow orchestration and routing</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="automation_details" value="reporting_analytics">
+                                                <span>Automated reporting and analytics</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="automation_details" value="communication_automation">
+                                                <span>Communication and follow-up automation</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="automation_details" value="compliance_monitoring">
+                                                <span>Compliance monitoring and reporting</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="ai_objectives" value="competitive_advantage" onchange="updateCheckboxSelection(this); toggleAIObjectiveSuboptions('competitive_advantage')">
+                                        <div class="option-content">
+                                            <div class="option-title">Gain Competitive Advantage</div>
+                                            <div class="option-description">Market differentiation, innovation speed, strategic positioning</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-competitive_advantage" style="display: none;">
+                                        <div class="suboption-title">Competitive advantage strategies:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="competitive_details" value="faster_decisions">
+                                                <span>Faster decision-making capabilities</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="competitive_details" value="unique_offerings">
+                                                <span>Unique AI-powered product features</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="competitive_details" value="market_responsiveness">
+                                                <span>Superior market responsiveness</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="competitive_details" value="innovation_speed">
+                                                <span>Accelerated innovation cycles</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="competitive_details" value="barrier_creation">
+                                                <span>Creating competitive barriers through AI</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Implementation Timeline & Urgency *</div>
+                            <div class="question-description">Understanding your timeline helps prioritize quick wins vs. long-term strategic initiatives</div>
+                            <div class="form-group">
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="implementation_timeline" value="immediate" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Immediate (1-3 months)</div>
+                                            <div class="option-description">Urgent need, quick wins focus, existing solution integration</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="implementation_timeline" value="short_term" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Short-term (3-6 months)</div>
+                                            <div class="option-description">Planned initiative, moderate complexity, proven solutions</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="implementation_timeline" value="medium_term" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Medium-term (6-12 months)</div>
+                                            <div class="option-description">Strategic initiative, custom development, comprehensive planning</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="implementation_timeline" value="long_term" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Long-term (12+ months)</div>
+                                            <div class="option-description">Transformation program, complex integration, phased approach</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Biggest Business Pain Points</div>
+                            <div class="question-description">What operational challenges consume the most time, resources, or create the biggest customer impact?</div>
+                            <div class="form-group">
+                                <textarea class="form-control large" name="biggest_pain_points" rows="4" placeholder="Describe your most pressing operational challenges, inefficiencies, or customer pain points that AI might help address..." onchange="saveAnswer(this)"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="completion-controls">
+                            <button class="btn btn-primary" onclick="completePhase(1)" disabled id="complete-btn-1">
+                                Continue to Data Infrastructure Assessment →
+                            </button>
+                            <button class="btn btn-secondary" onclick="togglePhase(0)">
+                                ← Back to Business Info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 2: Advanced Data Infrastructure & Maturity Assessment -->
+            <div class="phase" data-phase="2">
+                <div class="phase-header" onclick="togglePhase(2)">
+                    <div class="phase-title">
+                        <div class="phase-number">📊</div>
+                        <div class="phase-info">
+                            <h3>Data Infrastructure & Maturity Assessment</h3>
+                            <p>Comprehensive evaluation of your data readiness, quality, and AI implementation capabilities</p>
+                        </div>
+                    </div>
+                    <div class="phase-meta">
+                        <div class="estimated-time">⏱️ 5-6 minutes</div>
+                        <div class="phase-status">
+                            <div class="status-indicator"></div>
+                            <div class="expand-icon">▼</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-content">
+                    <div class="phase-details">
+                        <div class="expert-insight">
+                            <h5>Data Maturity Framework</h5>
+                            <p>Your data infrastructure is the foundation of AI success. This assessment evaluates your current data maturity against enterprise AI requirements and identifies critical gaps.</p>
+                        </div>
+
+                        <div class="section-divider">
+                            <div class="section-title">Data Quality & Governance</div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Current Data Quality Assessment *</div>
+                            <div class="question-description">Rate the overall quality of your business data across completeness, accuracy, consistency, and timeliness</div>
+                            <div class="form-group">
+                                <div class="matrix-question">
+                                    <table class="matrix-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Data Quality Dimension</th>
+                                                <th>Poor (1)</th>
+                                                <th>Fair (2)</th>
+                                                <th>Good (3)</th>
+                                                <th>Excellent (4)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Data Completeness</td>
+                                                <td><input type="radio" name="data_completeness" value="1" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_completeness" value="2" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_completeness" value="3" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_completeness" value="4" onchange="updateMatrixSelection(this)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data Accuracy</td>
+                                                <td><input type="radio" name="data_accuracy" value="1" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_accuracy" value="2" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_accuracy" value="3" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_accuracy" value="4" onchange="updateMatrixSelection(this)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data Consistency</td>
+                                                <td><input type="radio" name="data_consistency" value="1" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_consistency" value="2" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_consistency" value="3" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_consistency" value="4" onchange="updateMatrixSelection(this)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data Timeliness</td>
+                                                <td><input type="radio" name="data_timeliness" value="1" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_timeliness" value="2" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_timeliness" value="3" onchange="updateMatrixSelection(this)"></td>
+                                                <td><input type="radio" name="data_timeliness" value="4" onchange="updateMatrixSelection(this)"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Data Types & Sources Inventory *</div>
+                            <div class="question-description">Select all data types you currently collect and specify their primary sources and usage</div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="data_types" value="customer_data" onchange="updateCheckboxSelection(this); toggleDataTypeSuboptions('customer_data')">
+                                        <div class="option-content">
+                                            <div class="option-title">Customer Data</div>
+                                            <div class="option-description">Demographics, behavior, preferences, interactions</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-customer_data" style="display: none;">
+                                        <div class="suboption-title">Customer data details:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="customer_data_details" value="demographics">
+                                                <span>Demographic information (age, location, etc.)</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="customer_data_details" value="behavioral">
+                                                <span>Behavioral data (website clicks, app usage)</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="customer_data_details" value="transactional">
+                                                <span>Transaction history and purchase patterns</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="customer_data_details" value="communication">
+                                                <span>Communication preferences and history</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="customer_data_details" value="support_interactions">
+                                                <span>Customer support interactions and tickets</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="data_types" value="operational_data" onchange="updateCheckboxSelection(this); toggleDataTypeSuboptions('operational_data')">
+                                        <div class="option-content">
+                                            <div class="option-title">Operational Data</div>
+                                            <div class="option-description">Inventory, logistics, processes, performance metrics</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-operational_data" style="display: none;">
+                                        <div class="suboption-title">Operational data types:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="operational_data_details" value="inventory">
+                                                <span>Inventory levels and supply chain data</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="operational_data_details" value="performance_metrics">
+                                                <span>KPIs and performance metrics</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="operational_data_details" value="process_data">
+                                                <span>Process execution and workflow data</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="operational_data_details" value="quality_control">
+                                                <span>Quality control and inspection data</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="operational_data_details" value="maintenance">
+                                                <span>Equipment and maintenance records</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="data_types" value="financial_data" onchange="updateCheckboxSelection(this); toggleDataTypeSuboptions('financial_data')">
+                                        <div class="option-content">
+                                            <div class="option-title">Financial Data</div>
+                                            <div class="option-description">Revenue, costs, budgets, forecasts, accounting</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-financial_data" style="display: none;">
+                                        <div class="suboption-title">Financial data categories:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="financial_data_details" value="revenue_sales">
+                                                <span>Revenue and sales data</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="financial_data_details" value="cost_structure">
+                                                <span>Cost structure and expense data</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="financial_data_details" value="budgets_forecasts">
+                                                <span>Budgets and financial forecasts</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="financial_data_details" value="cash_flow">
+                                                <span>Cash flow and working capital</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="financial_data_details" value="profitability">
+                                                <span>Profitability by product/service/customer</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="data_types" value="external_data" onchange="updateCheckboxSelection(this); toggleDataTypeSuboptions('external_data')">
+                                        <div class="option-content">
+                                            <div class="option-title">External Data Sources</div>
+                                            <div class="option-description">Market data, social media, third-party APIs, industry data</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-external_data" style="display: none;">
+                                        <div class="suboption-title">External data sources:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="external_data_details" value="social_media">
+                                                <span>Social media and web analytics</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="external_data_details" value="market_research">
+                                                <span>Market research and industry reports</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="external_data_details" value="third_party_apis">
+                                                <span>Third-party APIs and data services</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="external_data_details" value="public_datasets">
+                                                <span>Public datasets and government data</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="external_data_details" value="iot_sensors">
+                                                <span>IoT sensors and device data</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-divider">
+                            <div class="section-title">Technical Infrastructure</div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Current Data Storage & Infrastructure *</div>
+                            <div class="question-description">Understanding your technical foundation is critical for AI implementation planning</div>
+                            <div class="form-group">
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="data_infrastructure" value="cloud_native" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Cloud-Native Architecture</div>
+                                            <div class="option-description">Modern cloud infrastructure with APIs, microservices, scalable data platforms</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="data_infrastructure" value="hybrid_cloud" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Hybrid Cloud Setup</div>
+                                            <div class="option-description">Mix of cloud and on-premise systems with some integration</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="data_infrastructure" value="traditional_systems" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Traditional On-Premise</div>
+                                            <div class="option-description">Primarily on-premise systems, limited cloud adoption</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="data_infrastructure" value="legacy_systems" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Legacy Systems</div>
+                                            <div class="option-description">Older systems with limited integration capabilities</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Data Integration & API Capabilities</div>
+                            <div class="question-description">How well can your systems integrate with AI tools and exchange data?</div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="integration_capabilities" value="rest_apis" onchange="updateCheckboxSelection(this)">
+                                        <span>REST APIs for data access and integration</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="integration_capabilities" value="real_time_streaming" onchange="updateCheckboxSelection(this)">
+                                        <span>Real-time data streaming capabilities</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="integration_capabilities" value="etl_pipelines" onchange="updateCheckboxSelection(this)">
+                                        <span>ETL/ELT data pipelines</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="integration_capabilities" value="webhooks" onchange="updateCheckboxSelection(this)">
+                                        <span>Webhook support for event-driven automation</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="integration_capabilities" value="data_warehouse" onchange="updateCheckboxSelection(this)">
+                                        <span>Data warehouse or lake infrastructure</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="integration_capabilities" value="limited_integration" onchange="updateCheckboxSelection(this)">
+                                        <span>Limited integration - mostly manual data export/import</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-divider">
+                            <div class="section-title">Data Governance & Compliance</div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Data Privacy & Compliance Status *</div>
+                            <div class="question-description">Critical for AI implementations, especially those processing customer data</div>
+                            <div class="form-group">
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="compliance_status" value="fully_compliant" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Fully Compliant</div>
+                                            <div class="option-description">GDPR, CCPA, industry-specific regulations fully implemented</div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="compliance_status" value="mostly_compliant" onchange="updateSelection(this)">
+                                        <div class="option-content">
+                                            <div class="option-title">Mostly Compliant</div>
+                                            <div class="option-description">Good compliance foundation, minor gaps to address</div>
+                                        </div>
+                                    </label>
+                                    <label class="                            <div class="question-item">
+                                <div class="question-title">Annual Revenue Range *</div>
+                                <div class="question-description">Helps us calibrate ROI models and recommend appropriately scaled AI solutions</div>
+                                <div class="form-group">
+                                    <div class="radio-group">
+                                        <label class="radio-option">
+                                            <input type="radio" name="revenue_range" value="under_1m" onchange="updateSelection(this); updateROIModel()">
+                                            <div class="option-content">
+                                                <div class="option-title">Under $1M</div>
+                                                <div class="option-description">Startup/Small business - Focus on cost-effective AI tools</div>
+                                            </div>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="revenue_range" value="1m_10m" onchange="updateSelection(this); updateROIModel()">
+                                            <div class="option-content">
+                                                <div class="option-title">$1M - $10M</div>
+                                                <div class="option-description">Growing business - Automation and efficiency focus</div>
+                                            </div>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="revenue_range" value="10m_50m" onchange="updateSelection(this); updateROIModel()">
+                                            <div class="option-content">
+                                                <div class="option-title">$10M - $50M</div>
+                                                <div class="option-description">Mid-market - Strategic AI implementations</div>
+                                            </div>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="revenue_range" value="50m_plus" onchange="updateSelection(this); updateROIModel()">
+                                            <div class="option-content">
+                                                <div class="option-title">$50M+</div>
+                                                <div class="option-description">Enterprise - Comprehensive AI transformation</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question-item">
+                                <div class="question-title">Your Information</div>
+                                <div class="question-description">Contact details for personalized follow-up and report delivery</div>
+                                <div class="form-group">
+                                    <label>Full Name *</label>
+                                    <input type="text" class="form-control" name="contact_name" placeholder="Your full name" onchange="saveAnswer(this)" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Business Email *</label>
+                                    <input type="email" class="form-control" name="contact_email" placeholder="your@company.com" onchange="saveAnswer(this)" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number (Optional)</label>
+                                    <input type="tel" class="form-control" name="contact_phone" placeholder="+1 (555) 123-4567" onchange="saveAnswer(this)">
+                                </div>
+                            </div>
+
+                            <div class="question-item">
+                                <div class="question-title">Your Role & Decision-Making Authority *</div>
+                                <div class="question-description">Helps us tailor recommendations to your perspective and influence level</div>
+                                <div class="form-group">
+                                    <div class="radio-group">
+                                        <label class="radio-option">
+                                            <input type="radio" name="user_role" value="ceo_founder" onchange="updateSelection(this)">
+                                            <div class="option-content">
+                                                <div class="option-title">CEO/Founder</div>
+                                                <div class="option-description">Strategic focus, ROI emphasis, competitive positioning</div>
+                                            </div>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="user_role" value="cto_tech_lead" onchange="updateSelection(this)">
+                                            <div class="option-content">
+                                                <div class="option-title">CTO/Technical Leader</div>
+                                                <div class="option-description">Implementation focus, architecture, technical feasibility</div>
+                                            </div>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="user_role" value="coo_ops" onchange="updateSelection(this)">
+                                            <div class="option-content">
+                                                <div class="option-title">COO/Operations Leader</div>
+                                                <div class="option-description">Process optimization, efficiency, operational impact</div>
+                                            </div>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="user_role" value="department_head" onchange="updateSelection(this)">
+                                            <div class="option-content">
+                                                <div class="option-title">Department Head/VP</div>
+                                                <div class="option-description">Departmental improvements, team productivity</div>
+                                            </div>
+                                        </label>
+                                        <label class="radio-option">
+                                            <input type="radio" name="user_role" value="consultant_advisor" onchange="updateSelection(this)">
+                                            <div class="option-content">
+                                                <div class="option-title">Consultant/Advisor</div>
+                                                <div class="option-description">Client recommendations, industry insights</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question-item">
+                                <div class="question-title">Business Model & Value Proposition</div>
+                                <div class="question-description">Brief description of what your business does and how you create value for customers</div>
+                                <div class="form-group">
+                                    <textarea class="form-control large" name="business_description" rows="4" placeholder="Describe your business model, key products/services, target customers, and main value proposition..." onchange="saveAnswer(this)"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="question-item">
+                                <div class="question-title">Competitive Context (Optional)</div>
+                                <div class="question-description">Help us understand your competitive landscape and positioning</div>
+                                <div class="form-group">
+                                    <label>Main Competitors (comma-separated)</label>
+                                    <input type="text" class="form-control" name="main_competitors" placeholder="Competitor1, Competitor2, Competitor3" onchange="saveAnswer(this)">
+                                </div>
+                                <div class="form-group">
+                                    <label>Your Key Differentiator</label>
+                                    <input type="text" class="form-control" name="key_differentiator" placeholder="What makes you unique in the market?" onchange="saveAnswer(this)">
+                                </div>
+                            </div>
+
+                            <div class="question-item">
+                                <div class="question-title">Social Presence & Additional Context</div>
+                                <div class="question-description">Optional links to help us better understand your business and provide contextual recommendations</div>
+                                <div class="form-group">
+                                    <label>LinkedIn Company Page</label>
+                                    <input type="url" class="form-control" name="linkedin_company" placeholder="https://linkedin.com/company/yourcompany" onchange="saveAnswer(this)">
+                                </div>
+                                <div class="form-group">
+                                    <label>Your LinkedIn Profile</label>
+                                    <input type="url" class="form-control" name="linkedin_personal" placeholder="https://linkedin.com/in/yourprofile" onchange="saveAnswer(this)">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="completion-controls">
+                            <button class="btn btn-primary" onclick="completePhase(0)" disabled id="complete-btn-0">
+                                Continue to Strategic Assessment →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 1: Strategic AI Objectives & Business Context -->
+            <div class="phase" data-phase="1">
+                <div class="phase-header" onclick="togglePhase(1)">
+                    <div class="phase-title">
+                        <div class="phase-number">🎯</div>
+                        <div class="phase-info">
+                            <h3>Strategic AI Objectives & Business Context</h3>
+                            <p>Define your AI vision, objectives, and business context for strategic alignment</p>
+                        </div>
+                    </div>
+                    <div class="phase-meta">
+                        <div class="estimated-time">⏱️ 4-5 minutes</div>
+                        <div class="phase-status">
+                            <div class="status-indicator"></div>
+                            <div class="expand-icon">▼</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-content">
+                    <div class="phase-details">
+                        <div class="expert-insight">
+                            <h5>Strategic Framework</h5>
+                            <p>These questions help align AI initiatives with business strategy and identify the highest-impact opportunities for your specific situation.</p>
+                        </div>
+
+                        <div class="section-divider">
+                            <div class="section-title">Industry & Market Position</div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Industry Sectors & Focus Areas *</div>
+                            <div class="question-description">Select your primary and any secondary industries to enable industry-specific AI recommendations</div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="industries" value="retail_ecommerce" onchange="updateCheckboxSelection(this); toggleIndustrySuboptions('retail_ecommerce')">
+                                        <div class="option-content">
+                                            <div class="option-title">Retail & E-commerce</div>
+                                            <div class="option-description">Physical stores, online marketplaces, omnichannel retail</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-retail_ecommerce" style="display: none;">
+                                        <div class="suboption-title">Specific retail focus areas:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="retail_details" value="online_marketplace">
+                                                <span>Online marketplace/E-commerce platform</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="retail_details" value="physical_stores">
+                                                <span>Physical retail stores</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="retail_details" value="omnichannel">
+                                                <span>Omnichannel retail experience</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="retail_details" value="b2b_wholesale">
+                                                <span>B2B wholesale/distribution</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="retail_details" value="private_label">
+                                                <span>Private label/house brands</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="industries" value="healthcare_medical" onchange="updateCheckboxSelection(this); toggleIndustrySuboptions('healthcare_medical')">
+                                        <div class="option-content">
+                                            <div class="option-title">Healthcare & Medical</div>
+                                            <div class="option-description">Medical practices, hospitals, digital health, medical technology</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-healthcare_medical" style="display: none;">
+                                        <div class="suboption-title">Healthcare specializations:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="healthcare_details" value="medical_practice">
+                                                <span>Medical practice/clinic management</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="healthcare_details" value="hospital_system">
+                                                <span>Hospital/health system operations</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="healthcare_details" value="digital_health">
+                                                <span>Digital health/telemedicine platforms</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="healthcare_details" value="medtech_devices">
+                                                <span>Medical technology/devices</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="healthcare_details" value="pharma_biotech">
+                                                <span>Pharmaceutical/biotech</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="industries" value="financial_services" onchange="updateCheckboxSelection(this); toggleIndustrySuboptions('financial_services')">
+                                        <div class="option-content">
+                                            <div class="option-title">Financial Services</div>
+                                            <div class="option-description">Banking, insurance, fintech, investment management</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-financial_services" style="display: none;">
+                                        <div class="suboption-title">Financial services areas:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="finance_details" value="banking_lending">
+                                                <span>Banking & lending operations</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="finance_details" value="insurance">
+                                                <span>Insurance products & claims</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="finance_details" value="fintech_payments">
+                                                <span>Fintech/digital payments</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="finance_details" value="investment_wealth">
+                                                <span>Investment/wealth management</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="finance_details" value="accounting_tax">
+                                                <span>Accounting/tax services</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="industries" value="technology_software" onchange="updateCheckboxSelection(this); toggleIndustrySuboptions('technology_software')">
+                                        <div class="option-content">
+                                            <div class="option-title">Technology & Software</div>
+                                            <div class="option-description">SaaS, software development, IT services, consulting</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-technology_software" style="display: none;">
+                                        <div class="suboption-title">Technology focus areas:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="tech_details" value="saas_products">
+                                                <span>SaaS/Software products</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="tech_details" value="custom_development">
+                                                <span>Custom software development</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="tech_details" value="it_consulting">
+                                                <span>IT consulting/professional services</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="tech_details" value="cloud_infrastructure">
+                                                <span>Cloud infrastructure/hosting</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="tech_details" value="cybersecurity">
+                                                <span>Cybersecurity solutions</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="industries" value="manufacturing" onchange="updateCheckboxSelection(this); toggleIndustrySuboptions('manufacturing')">
+                                        <div class="option-content">
+                                            <div class="option-title">Manufacturing & Production</div>
+                                            <div class="option-description">Consumer goods, industrial products, automotive, food & beverage</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-manufacturing" style="display: none;">
+                                        <div class="suboption-title">Manufacturing categories:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="manufacturing_details" value="consumer_goods">
+                                                <span>Consumer goods production</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="manufacturing_details" value="industrial_b2b">
+                                                <span>Industrial/B2B products</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="manufacturing_details" value="automotive">
+                                                <span>Automotive/transportation</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="manufacturing_details" value="food_beverage">
+                                                <span>Food & beverage processing</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="manufacturing_details" value="chemicals_materials">
+                                                <span>Chemicals/materials</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="industries" value="professional_services" onchange="updateCheckboxSelection(this); toggleIndustrySuboptions('professional_services')">
+                                        <div class="option-content">
+                                            <div class="option-title">Professional Services</div>
+                                            <div class="option-description">Consulting, legal, marketing, real estate, education</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-professional_services" style="display: none;">
+                                        <div class="suboption-title">Service categories:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="services_details" value="business_consulting">
+                                                <span>Business/management consulting</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="services_details" value="legal_services">
+                                                <span>Legal services</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="services_details" value="marketing_agency">
+                                                <span>Marketing/advertising agency</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="services_details" value="real_estate">
+                                                <span>Real estate services</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="services_details" value="education_training">
+                                                <span>Education/training services</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-divider">
+                            <div class="section-title">Company Scale & Structure</div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Company Size & Growth Stage *</div>
+                            <div class="question-description">Understanding your scale helps us recommend appropriately sized AI solutions and implementation approaches</div>
+                            <div class="form-group">
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="company_size" value="startup" onchange="updateSelection(this); toggleCompanySizeSuboptions('startup')">
+                                        <div class="option-content">
+                                            <div class="option-title">Startup/Early Stage (1-10 employees)</div>
+                                            <div class="option-description">Agile, resource-conscious, rapid growth focus</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-startup" style="display: none;">
+                                        <div class="suboption-title">Primary startup challenges to address:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="startup_challenges" value="product_market_fit">
+                                                <span>Achieving product-market fit efficiently</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="startup_challenges" value="customer_acquisition">
+                                                <span>Scalable customer acquisition</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="startup_challenges" value="operational_efficiency">
+                                                <span>Maximizing operational efficiency with limited resources</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="startup_challenges" value="competitive_differentiation">
+                                                <span>Rapid competitive differentiation</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="startup_challenges" value="data_insights">
+                                                <span>Early-stage data insights and analytics</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="radio-option">
+                                        <input type="radio" name="company_size" value="small_business" onchange="updateSelection(this); toggleCompanySizeSuboptions('small_business')">
+                                        <div class="option-content">
+                                            <div class="option-title">Small Business (11-50 employees)</div>
+                                            <div class="option-description">Growth management, process optimization</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-small_business" style="display: none;">
+                                        <div class="suboption-title">Key small business priorities:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="small_business_challenges" value="growth_scaling">
+                                                <span>Managing rapid growth without losing quality</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="small_business_challenges" value="process_standardization">
+                                                <span>Standardizing and documenting processes</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="small_business_challenges" value="talent_retention">
+                                                <span>Attracting and retaining key talent</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="small_business_challenges" value="market_expansion">
+                                                <span>Expanding to new markets or customer segments</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="small_business_challenges" value="cost_optimization">
+                                                <span>Optimizing costs while maintaining growth</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="radio-option">
+                                        <input type="radio" name="company_size" value="mid_market" onchange="updateSelection(this); toggleCompanySizeSuboptions('mid_market')">
+                                        <div class="option-content">
+                                            <div class="option-title">Mid-Market (51-250 employees)</div>
+                                            <div class="option-description">Operational excellence, technology modernization</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-mid_market" style="display: none;">
+                                        <div class="suboption-title">Mid-market strategic priorities:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="mid_market_challenges" value="operational_excellence">
+                                                <span>Achieving operational excellence at scale</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="mid_market_challenges" value="data_driven_decisions">
+                                                <span>Data-driven decision making across departments</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="mid_market_challenges" value="cross_dept_coordination">
+                                                <span>Improving cross-departmental coordination</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="mid_market_challenges" value="technology_modernization">
+                                                <span>Modernizing legacy systems and processes</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="mid_market_challenges" value="competitive_advantage">
+                                                <span>Maintaining competitive advantage through innovation</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <label class="radio-option">
+                                        <input type="radio" name="company_size" value="enterprise" onchange="updateSelection(this); toggleCompanySizeSuboptions('enterprise')">
+                                        <div class="option-content">
+                                            <div class="option-title">Enterprise (250+ employees)</div>
+                                            <div class="option-description">Digital transformation, compliance, enterprise architecture</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-enterprise" style="display: none;">
+                                        <div class="suboption-title">Enterprise transformation challenges:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="enterprise_challenges" value="digital_transformation">
+                                                <span>Large-scale digital transformation initiatives</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="enterprise_challenges" value="legacy_integration">
+                                                <span>Complex legacy system integration</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="enterprise_challenges" value="compliance_governance">
+                                                <span>Regulatory compliance and governance</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="enterprise_challenges" value="change_management">
+                                                <span>Enterprise-wide change management</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="enterprise_challenges" value="innovation_agility">
+                                                <span>Maintaining innovation and agility at scale</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-divider">
+                            <div class="section-title">AI Strategic Objectives</div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">Primary AI Objectives & Expected Outcomes *</div>
+                            <div class="question-description">Select all relevant objectives and specify details for each to enable precise ROI modeling and recommendations</div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="ai_objectives" value="cost_reduction" onchange="updateCheckboxSelection(this); toggleAIObjectiveSuboptions('cost_reduction')">
+                                        <div class="option-content">
+                                            <div class="option-title">Reduce Operational Costs</div>
+                                            <div class="option-description">Labor optimization, process efficiency, error reduction</div>
+                                        </div>
+                                    </label>
+                                    <div class="suboptions" id="suboptions-cost_reduction" style="display: none;">
+                                        <div class="suboption-title">Specific cost reduction targets:</div>
+                                        <div class="suboption-group">
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="cost_reduction_details" value="labor_automation">
+                                                <span>Labor cost reduction through automation</span>
+                                            </label>
+                                            <label class="suboption-item">
+                                                <input type="checkbox" name="cost_reduction_details" value="process_<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium AI Integration Assessment | Enterprise AI Strategy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .premium-header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+            position: relative;
+        }
+
+        .premium-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        .value-proposition {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .value-icon {
+            font-size: 1.2rem;
+        }
+
+        .progress-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .progress-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .progress-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #45a049);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 6px;
+        }
+
+        .phase-navigator {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-phase {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+        }
+
+        .nav-phase.completed {
+            background: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        .nav-phase.active {
+            background: white;
+            color: #667eea;
+            border-color: white;
+        }
+
+        .assessment-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .phase {
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .phase:last-child {
+            border-bottom: none;
+        }
+
+        .phase.active {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+        }
+
+        .phase.completed {
+            background: linear-gradient(135deg, #f0fff4 0%, #e8f5e8 100%);
+        }
+
+        .phase-header {
+            padding: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .phase-header:hover {
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .phase-title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .phase-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .phase.completed .phase-number {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+        }
+
+        .phase-info h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .phase-info p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .phase-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .estimated-time {
+            background: #f8f9fa;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .phase-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-indicator {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .phase.completed .status-indicator {
+            background: #4CAF50;
+        }
+
+        .phase.active .status-indicator {
+            background: #667eea;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .expand-icon {
+            font-size: 1.4rem;
+            color: #666;
+            transition: transform 0.3s ease;
+        }
+
+        .phase.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .phase-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background: #f8f9fa;
+        }
+
+        .phase.expanded .phase-content {
+            max-height: 5000px;
+        }
+
+        .phase-details {
+            padding: 40px;
+        }
+
+        .section-divider {
+            display: flex;
+            align-items: center;
+            margin: 30px 0 20px;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ddd, transparent);
+        }
+
+        .section-title {
+            margin: 0 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .question-section {
+            margin-bottom: 35px;
+        }
+
+        .question-section h4 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .question-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .question-item:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+
+        .question-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .question-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-control.large {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .radio-option:hover, .checkbox-option:hover {
+            background: #f8f9fa;
+            border-color: #667eea;
+        }
+
+        .radio-option input, .checkbox-option input {
+            margin: 0;
+            margin-top: 2px;
+        }
+
+        .radio-option.selected, .checkbox-option.selected {
+            background: #e8f0ff;
+            border-color: #667eea;
+        }
+
+        .option-content {
+            flex: 1;
+        }
+
+        .option-title {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .option-description {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .suboptions {
+            margin-left: 30px;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; max-height: 0; }
+            to { opacity: 1; max-height: 1000px; }
+        }
+
+        .suboption-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .suboption-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .suboption-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            background: white;
+        }
+
+        .suboption-item:hover {
+            background: #f0f2ff;
+            border-color: #667eea;
+        }
+
+        .suboption-item input {
+            margin: 0;
+        }
+
+        .suboption-item.selected {
+            background: #e8f0ff;
+            border-color: #667eea;
+        }
+
+        .matrix-question {
+            overflow-x: auto;
+        }
+
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .matrix-table th,
+        .matrix-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .matrix-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .matrix-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+            background: #fafafa;
+        }
+
+        .slider-container {
+            margin: 20px 0;
+        }
+
+        .slider {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #ddd;
+            outline: none;
+            margin: 15px 0;
+        }
+
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #667eea;
+            cursor: pointer;
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .completion-controls {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #666;
+            border: 2px solid #ddd;
+        }
+
+        .btn-secondary:hover {
+            background: #e9ecef;
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+        }
+
+        .expert-insight {
+            background: linear-gradient(135deg, #FFF3CD, #FCF4A3);
+            border: 1px solid #FFEAA7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .expert-insight::before {
+            content: '💡';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+
+        .expert-insight h5 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .expert-insight p {
+            color: #856404;
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .dynamic-recommendation {
+            background: linear-gradient(135deg, #D1ECF1, #BEE5EB);
+            border: 1px solid #B6D7DD;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            display: none;
+        }
+
+        .dynamic-recommendation.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .summary-section {
+            background: white;
+            margin-top: 40px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .summary-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .summary-title {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .summary-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .completion-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .recommendation-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .recommendation-card.priority-critical {
+            border-left-color: #e74c3c;
+        }
+
+        .recommendation-card.priority-high {
+            border-left-color: #f39c12;
+        }
+
+        .recommendation-card.priority-medium {
+            border-left-color: #3498db;
+        }
+
+        .recommendation-card.priority-low {
+            border-left-color: #27ae60;
+        }
+
+        .recommendation-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .priority-badge {
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .priority-critical {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .priority-high {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .priority-medium {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .priority-low {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+
+        .recommendation-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .recommendation-description {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .recommendation-impact {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 50px;
+            margin-top: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .phase-header {
+                padding: 25px 20px;
+            }
+            
+            .phase-details {
+                padding: 30px 20px;
+            }
+            
+            .completion-controls {
+                flex-direction: column;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .recommendations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="premium-header">
+            <div class="premium-badge">🎯 PREMIUM AI STRATEGY ASSESSMENT</div>
+            <div class="header">
+                <h1>Enterprise AI Integration Assessment</h1>
+                <div class="subtitle">Comprehensive AI Readiness Analysis & Implementation Roadmap</div>
+            </div>
+            
+            <div class="value-proposition">
+                <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 15px;">
+                    What You'll Receive ($2,997 Value):
+                </div>
+                <div class="value-grid">
+                    <div class="value-item">
+                        <span class="value-icon">📊</span>
+                        <span>Comprehensive Technical Audit</span>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">🎯</span>
+                        <span>Custom Implementation Roadmap</span>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">💰</span>
+                        <span>ROI Modeling & Financial Projections</span>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">🏆</span>
+                        <span>Competitive Intelligence Report</span>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">📋</span>
+                        <span>Executive Presentation Materials</span>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">👨‍💼</span>
+                        <span>1-Hour Expert Strategy Call</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-header">
+                <div class="progress-title">Assessment Progress</div>
+                <div class="progress-stats">
+                    <span id="currentPhase">Phase 0 of 7</span>
+                    <span id="timeElapsed">Time: 0:00</span>
+                    <span id="estimatedRemaining">Est. Remaining: 25 min</span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="phase-navigator">
+                <div class="nav-phase" data-phase="0">📋 Business Info</div>
+                <div class="nav-phase" data-phase="1">🎯 Strategy</div>
+                <div class="nav-phase" data-phase="2">📊 Data Audit</div>
+                <div class="nav-phase" data-phase="3">⚙️ Technical</div>
+                <div class="nav-phase" data-phase="4">🚀 Implementation</div>
+                <div class="nav-phase" data-phase="5">🏢 Organization</div>
+                <div class="nav-phase" data-phase="6">💰 Financial</div>
+            </div>
+        </div>
+
+        <div class="assessment-container">
+            <!-- Phase 0: Enhanced Business Intelligence Collection -->
+            <div class="phase" data-phase="0">
+                <div class="phase-header" onclick="togglePhase(0)">
+                    <div class="phase-title">
+                        <div class="phase-number">📋</div>
+                        <div class="phase-info">
+                            <h3>Business Intelligence Collection</h3>
+                            <p>Comprehensive business profile for personalized AI strategy development</p>
+                        </div>
+                    </div>
+                    <div class="phase-meta">
+                        <div class="estimated-time">⏱️ 3-4 minutes</div>
+                        <div class="phase-status">
+                            <div class="status-indicator"></div>
+                            <div class="expand-icon">▼</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-content">
+                    <div class="phase-details">
+                        <div class="expert-insight">
+                            <h5>Expert Insight</h5>
+                            <p>This information enables our AI specialists to research your business, analyze your competitive landscape, and provide industry-specific recommendations worth thousands in consulting value.</p>
+                        </div>
+
+                        <div class="question-section">
+                            <h4>Core Business Information</h4>
+                            
+                            <div class="question-item">
+                                <div class="question-title">Company/Organization Name *</div>
+                                <div class="question-description">Your official business name for personalized reporting and research</div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="company_name" placeholder="Enter your company name" onchange="saveAnswer(this)" required>
+                                </div>
+                            </div>
+
+                            <div class="question-item">
+                                <div class="question-title">Primary Website URL *</div>
+                                <div class="question-description">We'll analyze your website to understand your business model, technology stack, and identify AI opportunities</div>
+                                <div class="form-group">
+                                    <input type="url" class="form-control" name="website_url" placeholder="https://yourcompany.com" onchange="saveAnswer(this); analyzeWebsite(this.value)" required>
+                                </div>
+                                <div class="dynamic-recommendation" id="website-analysis">
+                                    <strong>🔍 Website Analysis:</strong> <span id="website-insights"></span>
+                                </div>
+                            </div>
+
+                            <div class="question-item">
+                                <div class="question-title">Annual Revenue Range *
